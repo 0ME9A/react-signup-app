@@ -1,0 +1,30 @@
+header {
+  max-width: 480px;
+  padding: 11px;
+  margin: 0 auto;
+}
+
+header p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  line-height: 24px;
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 54px;
+  color: var(--color-white);
+  margin: 0 0 24px;
+}
+
+@media screen and (max-width: 1020px) {
+  header {
+    text-align: center;
+  }
+  header h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}

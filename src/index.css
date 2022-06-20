@@ -1,13 +1,72 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  transition: 0.3s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --color-primary: #f56565;
+  --color-white: #fff;
+  --color-gray: #cbd5e0;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./assets/bg-intro-desktop.png");
+  background-color: var(--color-primary);
+  padding: 32px;
+}
+
+#root {
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+}
+.container:nth-child(2){
+    padding-right: 10px ;
+}
+
+@media screen and (max-width: 1020px) {
+  section {
+    grid-template-columns: auto;
+    gap: 5rem;
+    align-items: flex-start;
+  }
+  .container {
+    height: 40%;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  body {
+    overflow: auto;
+    padding: 8px;
+  }
+  .container {
+    height: auto;
+    padding: 1rem 0;
+    width: 100%;
+  }
+  .container:nth-child(2){
+    padding-right: 0px ;
+}
 }
